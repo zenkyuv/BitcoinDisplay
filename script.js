@@ -86,3 +86,5 @@ class BitcoinDisplay extends HTMLElement {
 }
 
 window.customElements.define("bitcoin-display", BitcoinDisplay);
+//aaaaaaaaaaaaaaaa
+const a = 0;
