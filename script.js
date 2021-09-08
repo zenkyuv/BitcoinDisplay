@@ -1,6 +1,6 @@
 const template = document.createElement("template");
 const displayBitcoin = document.querySelector(".display-bitcoin");
-console.log(displayBitcoin);
+
 template.innerHTML = `
   <style>
   * {
@@ -58,14 +58,14 @@ width: 100%;
   </style>
   <div class="main-container">
    <div class="container"><p class='mbtc'>mBTC</p><span>TO</span> <p class='btc'>BTC</p></div>
-  <input type="number" class="bitcoin-input"></input>
+  <input type="number" class="bitcoin-input" ></input>
    <br>
      
-    <input disabled  class="display-bitcoin"></input>
+    <input disabled  class="display-bitcoin"</input>
     
   </div>
 `;
-let bitcoinConvert = "";
+
 class BitcoinDisplay extends HTMLElement {
   constructor() {
     super();
@@ -76,11 +76,22 @@ class BitcoinDisplay extends HTMLElement {
     const input = this.shadowRoot.querySelector(".bitcoin-input");
     const display = this.shadowRoot.querySelector(".display-bitcoin");
 
+    function arrowsFunction() {
+      input.onchange = function showNumber() {
+        let bitcoinConvert = input.value / 1000;
+        display.value = `${bitcoinConvert} BTC`;
+      };
+    }
+    arrowsFunction();
+
     input.value = 1;
     display.value = `${1 / 1000} BTC`;
-    input.addEventListener("keyup", () => {
-      let bitcoinConvert = input.value / 1000;
-      display.value = `${bitcoinConvert} BTC`;
+
+    "keyup paste".split(" ").forEach((e) => {
+      input.addEventListener(e, () => {
+        let bitcoinConvert = input.value / 1000;
+        display.value = `${bitcoinConvert} BTC`;
+      });
     });
   }
 }
