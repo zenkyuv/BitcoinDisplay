@@ -44,5 +44,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "es-module-shims": "^0.13.0",
+    "importly": "0.1.0-dev.2",
+    "lit": "^2.0.0-rc.4"
+  }
 }
