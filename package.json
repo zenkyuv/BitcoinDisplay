@@ -1,48 +1,32 @@
 {
-  "_from": "bitcoindisplay",
-  "_id": "bitcoindisplay@1.0.0",
-  "_inBundle": false,
-  "_integrity": "sha512-Sq5UKX5v0HTpB+VYYaR/SAGpYRhcF0o/n8PNPrJogsywOCKhg+w54J4ItA198pBg9aBeRtlxZIvrEPP/WudrOA==",
-  "_location": "/bitcoindisplay",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "bitcoindisplay",
-    "name": "bitcoindisplay",
-    "escapedName": "bitcoindisplay",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/bitcoindisplay/-/bitcoindisplay-1.0.0.tgz",
-  "_shasum": "1a607e057ef99f813544eb409009443a895c6894",
-  "_spec": "bitcoindisplay",
-  "_where": "C:\\Users\\przem\\packages\\BitcoinDisplay",
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/zenkyuv/BitcoinDisplay/issues"
-  },
-  "bundleDependencies": false,
-  "deprecated": false,
+  "name": "bitcoindisplay",
+  "version": "1.0.0",
   "description": "convert bitcoins to milibit",
-  "homepage": "https://github.com/zenkyuv/BitcoinDisplay#readme",
-  "keywords": [
-    "bitcoindisplay"
-  ],
+  "author": "",
   "license": "ISC",
   "main": "script.js",
-  "name": "bitcoindisplay",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zenkyuv/BitcoinDisplay.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "importly < package-lock.json > importmap.json",
+    "start": "serve",
+    "test": "exit 0"
   },
-  "version": "1.0.0"
+  "dependencies": {
+    "es-module-shims": "^0.11.1",
+    "lit": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "importly": "0.1.0-dev.2",
+    "serve": "^12.0.1"
+  },
+  "homepage": "https://github.com/zenkyuv/BitcoinDisplay#readme",
+  "bugs": {
+    "url": "https://github.com/zenkyuv/BitcoinDisplay/issues"
+  },
+  "keywords": [
+    "bitcoindisplay"
+  ]
 }
