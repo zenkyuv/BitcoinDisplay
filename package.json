@@ -10,12 +10,17 @@
     "url": "git+https://github.com/zenkyuv/BitcoinDisplay.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "importly < package-lock.json > importmap.json",
+    "start": "serve",
+    "test": "exit 0"
   },
   "dependencies": {
-    "es-module-shims": "^0.13.0",
-    "importly": "0.1.0-dev.2",
+    "es-module-shims": "^0.11.1",
     "lit": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "importly": "0.1.0-dev.2",
+    "serve": "^12.0.1"
   },
   "homepage": "https://github.com/zenkyuv/BitcoinDisplay#readme",
   "bugs": {
